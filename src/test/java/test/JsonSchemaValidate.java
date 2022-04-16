@@ -13,8 +13,8 @@ public class JsonSchemaValidate {
 		baseURI="https://reqres.in/api";
 		
 		when().
-			get("/users/2").
+			get("/users").
 		then().statusCode(200).
-			assertThat().body(matchesJsonSchemaInClasspath("getSchemas.json"));
+			assertThat().body(matchesJsonSchemaInClasspath("JSONSchema.json"));
 	}	
 }
